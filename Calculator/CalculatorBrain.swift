@@ -2,8 +2,8 @@
 //  CalculatorBrain.swift
 //  Calculator
 //
-//  Created by FoxZhou on 2018/8/14.
-//  Copyright © 2018年 itools. All rights reserved.
+//  Created by Lgn on 2018/8/14.
+//  Copyright © 2018年 All rights reserved.
 //
 
 import Foundation
@@ -40,6 +40,31 @@ class CalculatorBrain {
         konwnOps["+"] = Op.BinaryOperation("+", +)
         konwnOps["−"] = Op.BinaryOperation("−", { $1 - $0 })
         konwnOps["√"] = Op.UnaryOperation("√", sqrt)
+    }
+    
+    var program: AnyObject {
+        get {
+            return opStack.map { $0.description } as AnyObject
+            //==
+//            var res = Array<String>()
+//            for op in opStack {
+//                res.append(op.description)
+//            }
+//            return res as AnyObject
+        }
+        set {
+            if let opSymbols = newValue as? Array<String> {
+                var newOpStack = [Op]()
+                for opSymbol in opSymbols {
+                    if let op = konwnOps[opSymbol] {
+                        newOpStack.append(op)
+                    } else if let operand = NumberFormatter().number(from: opSymbol)?.doubleValue {
+                        newOpStack.append(.Operand(operand))
+                    }
+                }
+                opStack = newOpStack
+            }
+        }
     }
     
     private func evaluate(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {
@@ -84,12 +109,6 @@ class CalculatorBrain {
         }
         return evaluate()
     }
-    
-    
-    
-    
-    
-    
     
     
 }

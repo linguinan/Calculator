@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Calculator
 //
-//  Created by FoxZhou on 2018/8/10.
-//  Copyright © 2018年 itools. All rights reserved.
+//  Created by Lgn on 2018/8/10.
+//  Copyright © 2018年 All rights reserved.
 //
 
 import UIKit

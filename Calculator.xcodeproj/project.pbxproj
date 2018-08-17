@@ -58,11 +58,11 @@
 			children = (
 				7D75216E211D266D00C3E136 /* AppDelegate.swift */,
 				7D752170211D266D00C3E136 /* ViewController.swift */,
+				7D8156362122704F00B81353 /* CalculatorBrain.swift */,
 				7D752172211D266D00C3E136 /* Main.storyboard */,
 				7D752175211D267500C3E136 /* Assets.xcassets */,
 				7D752177211D267500C3E136 /* LaunchScreen.storyboard */,
 				7D75217A211D267500C3E136 /* Info.plist */,
-				7D8156362122704F00B81353 /* CalculatorBrain.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -287,6 +287,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S9SPLS8YP;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +306,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9S9SPLS8YP;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
